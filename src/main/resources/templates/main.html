@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 th:text="${CLIENT_ID}"></h1>
+<a th:href="@{https://app.asana.com/-/oauth_authorize?
+&response_type=code
+&state=thisIsARandomString
+&scope=default
+(
+client_id = ${CLIENT_ID},
+redirect_uri=${REDIRECT_URI}
+)}
+">Authenticate with Asana</a>
+</body>
+</html>
